@@ -10,8 +10,12 @@ class MethodChannelMyidWrapper extends MyidWrapperPlatform {
   final methodChannel = const MethodChannel('myid_wrapper');
 
   @override
-  Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
+  Future<String?> startMyId(
+      String passportData, String dateOfBirth) async {
+    final version = await methodChannel.invokeMethod<String>('startMyId', {
+      'passportData': passportData,
+      'dateOfBirth': dateOfBirth,
+    });
     return version;
   }
 }

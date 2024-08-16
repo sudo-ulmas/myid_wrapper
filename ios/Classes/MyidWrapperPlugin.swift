@@ -33,11 +33,17 @@ public class MyidWrapperPlugin: NSObject, FlutterPlugin, MyIdNativeClientDelegat
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
     switch call.method {
-    case "getPlatformVersion":
-        flResult = result
-        let myIdClient = MyIdNativeClient(passportData: "AD5644300", dateOfBirth: "13.08.1997")
-        myIdClient.delegate = self
-        myIdClient.startMyIdjon()
+    case "startMyId":
+        if let arguments = call.arguments as? [String: Any],
+         let passportData = arguments["passportData"] as? String,
+           let dateOfBirth = arguments["dateOfBirth"] as? String {
+            flResult = result
+            let myIdClient = MyIdNativeClient(passportData: passportData, dateOfBirth: dateOfBirth)
+            myIdClient.delegate = self
+            myIdClient.startMyIdjon()
+        } else {
+            result(FlutterError(code: "100", message: "Provided arguments to startMyId method is not valid", details: ""))
+        }
     default:
       result(FlutterMethodNotImplemented)
     }
