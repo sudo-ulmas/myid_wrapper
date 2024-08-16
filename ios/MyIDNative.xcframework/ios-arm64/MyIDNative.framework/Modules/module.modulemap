@@ -1,0 +1,6 @@
+framework module MyIDNative {
+  umbrella header "MyIDNative.h"
+  export *
+
+  module * { export * }
+}

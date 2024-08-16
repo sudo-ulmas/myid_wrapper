@@ -1,0 +1,444 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIDNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MyIdSDK",
+        "printedName": "MyIdSDK",
+        "declKind": "Import",
+        "moduleName": "MyIDNative"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIDNative"
+      },
+      {
+        "kind": "Import",
+        "name": "MyIdSDK",
+        "printedName": "MyIdSDK",
+        "declKind": "Import",
+        "moduleName": "MyIDNative"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MyIDNative",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MyIdSDK",
+        "printedName": "MyIdSDK",
+        "declKind": "Import",
+        "moduleName": "MyIDNative"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MyIdNativeClientDelegate",
+        "printedName": "MyIdNativeClientDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onSuccess",
+            "printedName": "onSuccess(code:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MyIDNative0A22IdNativeClientDelegateP9onSuccess4codeySS_tF",
+            "mangledName": "$s10MyIDNative0A22IdNativeClientDelegateP9onSuccess4codeySS_tF",
+            "moduleName": "MyIDNative",
+            "genericSig": "<τ_0_0 where τ_0_0 : MyIDNative.MyIdNativeClientDelegate>",
+            "sugared_genericSig": "<Self where Self : MyIDNative.MyIdNativeClientDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onError",
+            "printedName": "onError(exception:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MyIDNative0A22IdNativeClientDelegateP7onError9exceptionySS_tF",
+            "mangledName": "$s10MyIDNative0A22IdNativeClientDelegateP7onError9exceptionySS_tF",
+            "moduleName": "MyIDNative",
+            "genericSig": "<τ_0_0 where τ_0_0 : MyIDNative.MyIdNativeClientDelegate>",
+            "sugared_genericSig": "<Self where Self : MyIDNative.MyIdNativeClientDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onUserExited",
+            "printedName": "onUserExited()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MyIDNative0A22IdNativeClientDelegateP12onUserExitedyyF",
+            "mangledName": "$s10MyIDNative0A22IdNativeClientDelegateP12onUserExitedyyF",
+            "moduleName": "MyIDNative",
+            "genericSig": "<τ_0_0 where τ_0_0 : MyIDNative.MyIdNativeClientDelegate>",
+            "sugared_genericSig": "<Self where Self : MyIDNative.MyIdNativeClientDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:10MyIDNative0A22IdNativeClientDelegateP",
+        "mangledName": "$s10MyIDNative0A22IdNativeClientDelegateP",
+        "moduleName": "MyIDNative",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MyIdNativeClient",
+        "printedName": "MyIdNativeClient",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "delegate",
+            "printedName": "delegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "WeakStorage",
+                "printedName": "(any MyIDNative.MyIdNativeClientDelegate)?"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10MyIDNative0A14IdNativeClientC8delegateAA0acdE8Delegate_pSgvp",
+            "mangledName": "$s10MyIDNative0A14IdNativeClientC8delegateAA0acdE8Delegate_pSgvp",
+            "moduleName": "MyIDNative",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "ReferenceOwnership",
+              "AccessControl"
+            ],
+            "ownership": 1,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any MyIDNative.MyIdNativeClientDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MyIdNativeClientDelegate",
+                        "printedName": "any MyIDNative.MyIdNativeClientDelegate",
+                        "usr": "s:10MyIDNative0A22IdNativeClientDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10MyIDNative0A14IdNativeClientC8delegateAA0acdE8Delegate_pSgvg",
+                "mangledName": "$s10MyIDNative0A14IdNativeClientC8delegateAA0acdE8Delegate_pSgvg",
+                "moduleName": "MyIDNative",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any MyIDNative.MyIdNativeClientDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MyIdNativeClientDelegate",
+                        "printedName": "any MyIDNative.MyIdNativeClientDelegate",
+                        "usr": "s:10MyIDNative0A22IdNativeClientDelegateP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10MyIDNative0A14IdNativeClientC8delegateAA0acdE8Delegate_pSgvs",
+                "mangledName": "$s10MyIDNative0A14IdNativeClientC8delegateAA0acdE8Delegate_pSgvs",
+                "moduleName": "MyIDNative",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10MyIDNative0A14IdNativeClientC8delegateAA0acdE8Delegate_pSgvM",
+                "mangledName": "$s10MyIDNative0A14IdNativeClientC8delegateAA0acdE8Delegate_pSgvM",
+                "moduleName": "MyIDNative",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(passportData:dateOfBirth:delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MyIdNativeClient",
+                "printedName": "MyIDNative.MyIdNativeClient",
+                "usr": "s:10MyIDNative0A14IdNativeClientC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any MyIDNative.MyIdNativeClientDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MyIdNativeClientDelegate",
+                    "printedName": "any MyIDNative.MyIdNativeClientDelegate",
+                    "usr": "s:10MyIDNative0A22IdNativeClientDelegateP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10MyIDNative0A14IdNativeClientC12passportData11dateOfBirth8delegateACSS_SSAA0acdE8Delegate_pSgtcfc",
+            "mangledName": "$s10MyIDNative0A14IdNativeClientC12passportData11dateOfBirth8delegateACSS_SSAA0acdE8Delegate_pSgtcfc",
+            "moduleName": "MyIDNative",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "startMyIdjon",
+            "printedName": "startMyIdjon()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MyIDNative0A14IdNativeClientC05startA5IdjonyyF",
+            "mangledName": "$s10MyIDNative0A14IdNativeClientC05startA5IdjonyyF",
+            "moduleName": "MyIDNative",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onSuccess",
+            "printedName": "onSuccess(result:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MyIdResult",
+                "printedName": "MyIdSDK.MyIdResult",
+                "usr": "c:@M@MyIdSDK@objc(cs)MyIdResult"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MyIDNative0A14IdNativeClientC9onSuccess6resulty0aC3SDK0aC6ResultC_tF",
+            "mangledName": "$s10MyIDNative0A14IdNativeClientC9onSuccess6resulty0aC3SDK0aC6ResultC_tF",
+            "moduleName": "MyIDNative",
+            "objc_name": "onSuccessWithResult:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onError",
+            "printedName": "onError(exception:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MyIdException",
+                "printedName": "MyIdSDK.MyIdException",
+                "usr": "c:@M@MyIdSDK@objc(cs)MyIdException"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MyIDNative0A14IdNativeClientC7onError9exceptiony0aC3SDK0aC9ExceptionC_tF",
+            "mangledName": "$s10MyIDNative0A14IdNativeClientC7onError9exceptiony0aC3SDK0aC9ExceptionC_tF",
+            "moduleName": "MyIDNative",
+            "objc_name": "onErrorWithException:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onUserExited",
+            "printedName": "onUserExited()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MyIDNative0A14IdNativeClientC12onUserExitedyyF",
+            "mangledName": "$s10MyIDNative0A14IdNativeClientC12onUserExitedyyF",
+            "moduleName": "MyIDNative",
+            "objc_name": "onUserExited",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10MyIDNative0A14IdNativeClientC",
+        "mangledName": "$s10MyIDNative0A14IdNativeClientC",
+        "moduleName": "MyIDNative",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "MyIdClientDelegate",
+            "printedName": "MyIdClientDelegate",
+            "usr": "c:@M@MyIdSDK@objc(pl)MyIdClientDelegate",
+            "mangledName": "$s7MyIdSDK0aB14ClientDelegateP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/abdullah\/flutterProjects\/MyIDNative\/MyIDNative\/MyIdNative.swift",
+      "kind": "StringLiteral",
+      "offset": 102,
+      "length": 53,
+      "value": "\"yagona_sdk-zL0y2qa4EsMiLRhjRd3iPcraiT78ojMIjGIvOprk\""
+    },
+    {
+      "filePath": "\/Users\/abdullah\/flutterProjects\/MyIDNative\/MyIDNative\/MyIdNative.swift",
+      "kind": "StringLiteral",
+      "offset": 193,
+      "length": 394,
+      "value": "\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAstzi2XRq3reo0vtSGp5OHFbSdTcVYh9gl3PUVFVFpLFrNTiCqo46iAxnLd0+edT8e+mD6YlwRTv9rMAE2wRUgG\/k9K2WKlKRGbvSqvJrPVR7kj06t4D848o7UqrZVssvl65Y+sGKXNi2hiSr7ihwkpSdN21AzZEC3OjXaFkySdB6u+65g4f7sIB51Mg33WrcdwnEWKa7uOuIA+WA32OGroL7hwi7ygONA9hh8icy\/R2IPAWH5f++gHIWjZAdXiwxCdcKEOWtv7FKl4asIg8jzNw0y\/nH+ShQo8kBHl38LKiqnXcvTqUimuigIvtE1PElWoUrIRv7C3R73CXs1V7yAwIDAQAB\""
+    },
+    {
+      "filePath": "\/Users\/abdullah\/flutterProjects\/MyIDNative\/MyIDNative\/MyIdNative.swift",
+      "kind": "StringLiteral",
+      "offset": 627,
+      "length": 38,
+      "value": "\"77b991d1-077b-4ebf-9a2c-33d7b9d309d5\""
+    }
+  ]
+}

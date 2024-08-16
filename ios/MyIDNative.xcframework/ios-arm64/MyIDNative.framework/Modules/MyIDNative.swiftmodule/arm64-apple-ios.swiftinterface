@@ -1,0 +1,24 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios17.5 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name MyIDNative
+import Foundation
+@_exported import MyIDNative
+import MyIdSDK
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public protocol MyIdNativeClientDelegate : AnyObject {
+  func onSuccess(code: Swift.String)
+  func onError(exception: Swift.String)
+  func onUserExited()
+}
+public class MyIdNativeClient : MyIdSDK.MyIdClientDelegate {
+  weak public var delegate: (any MyIDNative.MyIdNativeClientDelegate)?
+  public init(passportData: Swift.String, dateOfBirth: Swift.String, delegate: (any MyIDNative.MyIdNativeClientDelegate)? = nil)
+  public func startMyIdjon()
+  @objc public func onSuccess(result: MyIdSDK.MyIdResult)
+  @objc public func onError(exception: MyIdSDK.MyIdException)
+  @objc public func onUserExited()
+  @objc deinit
+}
