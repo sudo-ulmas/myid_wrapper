@@ -22,6 +22,9 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        flatDir {
+            dirs 'libs'
+        }
     }
 }
 
@@ -72,7 +75,7 @@ android {
     }
 }
 dependencies {
-    implementation(files("libs/myidlibrary-debug.aar"))
+    compileOnly fileTree(dir: 'libs', include: ['*.aar'])
     implementation("uz.myid.sdk.capture:myid-capture-sdk:2.3.0")
 }
 
