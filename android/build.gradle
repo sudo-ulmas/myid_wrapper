@@ -2,8 +2,6 @@ group = "com.example.myid_wrapper"
 version = "1.0-SNAPSHOT"
 
 buildscript {
-//    ext.kotlin_version = "1.7.10"
-//    ext.kotlin_version = "2.0.10"
     ext.kotlin_version = "1.9.10"
     repositories {
         google()
@@ -56,11 +54,7 @@ android {
         minSdk = 21
     }
 
-    dependencies {
-        testImplementation("org.jetbrains.kotlin:kotlin-test")
-        testImplementation("org.mockito:mockito-core:5.1.0")
-//        implementation(name: 'myidandroid-debug', ext: 'aar')
-    }
+
 
     testOptions {
         unitTests.all {
@@ -77,5 +71,7 @@ android {
 dependencies {
     compileOnly fileTree(dir: 'libs', include: ['*.aar'])
     implementation("uz.myid.sdk.capture:myid-capture-sdk:2.3.0")
+    testImplementation("org.jetbrains.kotlin:kotlin-test")
+    testImplementation("org.mockito:mockito-core:5.1.0")
 }
 
