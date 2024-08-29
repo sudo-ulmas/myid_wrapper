@@ -1,6 +1,8 @@
 package com.example.myid_wrapper
 
 import android.app.Activity
+import android.os.Handler
+import android.os.Looper
 import com.example.myidlibrary.MyIdNativeClient
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
@@ -31,8 +33,10 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "myid_wrapper")
     channel.setMethodCallHandler(this)
-    myIdNativeClient = MyIdNativeClient(passportData = "", dateOfBirth = "")
+    Handler(Looper.getMainLooper()).postDelayed({
+      myIdNativeClient = MyIdNativeClient(passportData = "", dateOfBirth = "")
 //    activityListener = MyIdSdkActivityListener(myIdNativeClient)
+    }, 10000)
 
   }
 
