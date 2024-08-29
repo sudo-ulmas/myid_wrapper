@@ -33,11 +33,8 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "myid_wrapper")
     channel.setMethodCallHandler(this)
-    Handler(Looper.getMainLooper()).postDelayed({
-      myIdNativeClient = MyIdNativeClient(passportData = "", dateOfBirth = "")
-//    activityListener = MyIdSdkActivityListener(myIdNativeClient)
-    }, 10000)
 
+//    activityListener = MyIdSdkActivityListener(myIdNativeClient)
   }
 
   override fun onMethodCall(call: MethodCall, result: Result) {
@@ -50,9 +47,10 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
   private fun startMyId(result: Result) {
     activity?.let { act ->
       try {
-        activityListener.setCurrentFlutterResult(result)
-//        myIdNativeClient.setActivity(act)
-//        myIdNativeClient.startMyIdjon()
+        myIdNativeClient = MyIdNativeClient(passportData = "", dateOfBirth = "")
+//        activityListener.setCurrentFlutterResult(result)
+        myIdNativeClient.setActivity(act)
+        myIdNativeClient.startMyIdjon()
       } catch (e: Exception) {
         println("che error? ${e.message}")
         result.error("MyID_ERROR", "Failed to start MyID SDK: ${e.message}", null)
