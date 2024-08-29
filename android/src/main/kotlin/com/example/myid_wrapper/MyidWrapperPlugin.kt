@@ -31,8 +31,8 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "myid_wrapper")
     channel.setMethodCallHandler(this)
-//    myIdNativeClient = MyIdNativeClient(passportData = "", dateOfBirth = "")
-//    activityListener = MyIdSdkActivityListener(myIdNativeClient)
+    myIdNativeClient = MyIdNativeClient(passportData = "", dateOfBirth = "")
+    activityListener = MyIdSdkActivityListener(myIdNativeClient)
 
   }
 
