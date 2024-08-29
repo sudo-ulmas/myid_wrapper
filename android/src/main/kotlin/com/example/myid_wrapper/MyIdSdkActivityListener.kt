@@ -3,7 +3,7 @@ package com.example.myid_wrapper
 import android.content.Intent
 import android.graphics.Bitmap
 import android.util.Base64
-//import com.example.myidlibrary.MyIdNativeClient
+import com.example.myidlibrary.MyIdNativeClient
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.PluginRegistry
 import uz.myid.android.sdk.capture.model.MyIdGraphicFieldType
@@ -11,7 +11,7 @@ import uz.myid.android.sdk.capture.model.MyIdImageFormat
 import java.io.ByteArrayOutputStream
 
 class MyIdSdkActivityListener(
-//    private val client: MyIdNativeClient
+    private val client: MyIdNativeClient
 ) : PluginRegistry.ActivityResultListener {
 
     private var flutterResult: MethodChannel.Result? = null
@@ -21,48 +21,48 @@ class MyIdSdkActivityListener(
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?): Boolean {
-//        client.handleActivityResult(resultCode,
-//            onSuccess = { result ->
-//                try {
-//                    val bitmap = result.getGraphicFieldImageByType(MyIdGraphicFieldType.FACE_PORTRAIT)
-//
-//                    val response = Response(
-//                        code = result.code,
-//                        comparison = result.comparison,
-//                        base64 = bitmap?.toBase64()
-//                    )
-//                    println("success ${response.toMap()}")
-//                    flutterResult?.success(response.toMap())
-//                } catch (e: Exception) {
-//                    val response = Response(
-//                        code = result.code,
-//                        comparison = result.comparison
-//                    )
-//                    flutterResult?.success(response.toMap())
-//                } finally {
-//                    flutterResult = null
-//                }
-//            },
-//            onError = { exception ->
-//                println("error ${exception.code} - ${exception.message}")
-//                flutterResult?.error(
-//                    "error",
-//                    "${exception.code} - ${exception.message}",
-//                    null
-//                )
-//                flutterResult = null
-//            },
-//            onUserExited = {
-//
-//                println("exited user canceled flow")
-//                flutterResult?.error(
-//                    "cancel",
-//                    "User canceled flow",
-//                    null
-//                )
-//                flutterResult = null
-//            }
-//        )
+        client.handleActivityResult(resultCode,
+            onSuccess = { result ->
+                try {
+                    val bitmap = result.getGraphicFieldImageByType(MyIdGraphicFieldType.FACE_PORTRAIT)
+
+                    val response = Response(
+                        code = result.code,
+                        comparison = result.comparison,
+                        base64 = bitmap?.toBase64()
+                    )
+                    println("success ${response.toMap()}")
+                    flutterResult?.success(response.toMap())
+                } catch (e: Exception) {
+                    val response = Response(
+                        code = result.code,
+                        comparison = result.comparison
+                    )
+                    flutterResult?.success(response.toMap())
+                } finally {
+                    flutterResult = null
+                }
+            },
+            onError = { exception ->
+                println("error ${exception.code} - ${exception.message}")
+                flutterResult?.error(
+                    "error",
+                    "${exception.code} - ${exception.message}",
+                    null
+                )
+                flutterResult = null
+            },
+            onUserExited = {
+
+                println("exited user canceled flow")
+                flutterResult?.error(
+                    "cancel",
+                    "User canceled flow",
+                    null
+                )
+                flutterResult = null
+            }
+        )
         return true
     }
 
