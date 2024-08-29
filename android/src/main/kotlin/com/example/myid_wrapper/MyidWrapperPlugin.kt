@@ -1,7 +1,7 @@
 package com.example.myid_wrapper
 
 import android.app.Activity
-import com.example.myidlibrary.MyIdNativeClient
+//import com.example.myidlibrary.MyIdNativeClient
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
@@ -17,7 +17,7 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
   private lateinit var channel : MethodChannel
   private var activity: Activity? = null
   private lateinit var activityListener: MyIdSdkActivityListener
-  private lateinit var myIdNativeClient: MyIdNativeClient
+//  private lateinit var myIdNativeClient: MyIdNativeClient
 
   companion object {
     @JvmStatic
@@ -31,8 +31,8 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "myid_wrapper")
     channel.setMethodCallHandler(this)
-    myIdNativeClient = MyIdNativeClient(passportData = "", dateOfBirth = "")
-    activityListener = MyIdSdkActivityListener(myIdNativeClient)
+//    myIdNativeClient = MyIdNativeClient(passportData = "", dateOfBirth = "")
+//    activityListener = MyIdSdkActivityListener(myIdNativeClient)
 
   }
 
@@ -47,8 +47,8 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
     activity?.let { act ->
       try {
         activityListener.setCurrentFlutterResult(result)
-        myIdNativeClient.setActivity(act)
-        myIdNativeClient.startMyIdjon()
+//        myIdNativeClient.setActivity(act)
+//        myIdNativeClient.startMyIdjon()
       } catch (e: Exception) {
         println("che error? ${e.message}")
         result.error("MyID_ERROR", "Failed to start MyID SDK: ${e.message}", null)
