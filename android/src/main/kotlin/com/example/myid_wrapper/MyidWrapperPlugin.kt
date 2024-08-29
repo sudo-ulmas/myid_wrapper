@@ -1,7 +1,7 @@
 package com.example.myid_wrapper
 
 import android.app.Activity
-//import com.example.myidlibrary.MyIdNativeClient
+import com.example.myidlibrary.MyIdNativeClient
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
@@ -17,7 +17,7 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
   private lateinit var channel : MethodChannel
   private var activity: Activity? = null
   private lateinit var activityListener: MyIdSdkActivityListener
-//  private lateinit var myIdNativeClient: MyIdNativeClient
+  private lateinit var myIdNativeClient: MyIdNativeClient
 
   companion object {
     @JvmStatic
