@@ -34,7 +34,8 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "myid_wrapper")
     channel.setMethodCallHandler(this)
 
-//    activityListener = MyIdSdkActivityListener(myIdNativeClient)
+    myIdNativeClient = MyIdNativeClient(passportData = "", dateOfBirth = "")
+    activityListener = MyIdSdkActivityListener(myIdNativeClient)
   }
 
   override fun onMethodCall(call: MethodCall, result: Result) {
@@ -47,16 +48,13 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
   private fun startMyId(result: Result) {
     activity?.let { act ->
       try {
-        myIdNativeClient = MyIdNativeClient(passportData = "", dateOfBirth = "")
-//        activityListener.setCurrentFlutterResult(result)
+        activityListener.setCurrentFlutterResult(result)
         myIdNativeClient.setActivity(act)
         myIdNativeClient.startMyIdjon()
       } catch (e: Exception) {
-        println("che error? ${e.message}")
         result.error("MyID_ERROR", "Failed to start MyID SDK: ${e.message}", null)
       }
     } ?: run {
-      println("shta ?")
       result.error("ACTIVITY_NULL", "Activity is not attached", null)
     }
   }
@@ -69,7 +67,6 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
   override fun onAttachedToActivity(binding: ActivityPluginBinding) {
     activity = binding.activity
     binding.addActivityResultListener(activityListener)
-    println("this is called bro")
   }
 
   override fun onDetachedFromActivityForConfigChanges() {
