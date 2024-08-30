@@ -31,7 +31,7 @@ class MyIdSdkActivityListener(
                         comparison = result.comparison,
                         base64 = bitmap?.toBase64()
                     )
-                    println("success ${response.toMap()}")
+                    println("success ${response.code}")
                     flutterResult?.success(response.toMap())
                 } catch (e: Exception) {
                     val response = Response(
