@@ -32,7 +32,7 @@ class MyIdSdkActivityListener(
                         base64 = bitmap?.toBase64()
                     )
                     println("success ${response.code} and result $flutterResult")
-                    flutterResult?.success(response.toMap())
+                    flutterResult?.success(response.code)
                 } catch (e: Exception) {
                     val response = Response(
                         code = result.code,
