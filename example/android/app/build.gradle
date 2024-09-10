@@ -23,8 +23,8 @@ android {
         applicationId = "com.example.myid_wrapper_example"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        versionCode = 1//flutter.versionCode
+        versionName = "1.0"//flutter.versionName
     }
 
     buildTypes {

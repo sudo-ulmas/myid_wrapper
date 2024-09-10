@@ -34,23 +34,24 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "myid_wrapper")
     channel.setMethodCallHandler(this)
 
-    myIdNativeClient = MyIdNativeClient(passportData = "", dateOfBirth = "")
+    myIdNativeClient = MyIdNativeClient()
     activityListener = MyIdSdkActivityListener(myIdNativeClient)
   }
 
   override fun onMethodCall(call: MethodCall, result: Result) {
     if (call.method == "startMyId") {
-      startMyId(result)
+      val config = call.arguments as HashMap<*, *>
+      startMyId(result, config["passportData"] as String, config["dateOfBirth"] as String))
     } else {
       result.notImplemented()
     }
   }
-  private fun startMyId(result: Result) {
+  private fun startMyId(result: Result, passportData: String, dateOfBirth: String) {
     activity?.let { act ->
       try {
         activityListener.setCurrentFlutterResult(result)
         myIdNativeClient.setActivity(act)
-        myIdNativeClient.startMyIdjon()
+        myIdNativeClient.startMyIdjon(passportData, dateOfBirth)
       } catch (e: Exception) {
         result.error("MyID_ERROR", "Failed to start MyID SDK: ${e.message}", null)
       }
