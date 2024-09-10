@@ -41,7 +41,7 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
   override fun onMethodCall(call: MethodCall, result: Result) {
     if (call.method == "startMyId") {
       val config = call.arguments as HashMap<*, *>
-      startMyId(result, config["passportData"] as String, config["dateOfBirth"] as String))
+      startMyId(result, config["passportData"] as String, config["dateOfBirth"] as String)
     } else {
       result.notImplemented()
     }
