@@ -51,7 +51,7 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
       try {
         activityListener.setCurrentFlutterResult(result)
         myIdNativeClient.setActivity(act)
-        myIdNativeClient.startMyIdjon(passportData, dateOfBirth)
+        myIdNativeClient.startMyIdxon(passportData, dateOfBirth)
       } catch (e: Exception) {
         result.error("MyID_ERROR", "Failed to start MyID SDK: ${e.message}", null)
       }
