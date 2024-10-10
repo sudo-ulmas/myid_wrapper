@@ -16,10 +16,8 @@ class MethodChannelMyidWrapper extends MyidWrapperPlatform {
         'passportData': passportData,
         'dateOfBirth': dateOfBirth,
       });
-      print("yo yo yo $version");
       return version;
     } catch (e) {
-      print("qskin bro $e");
     }
   }
 }
