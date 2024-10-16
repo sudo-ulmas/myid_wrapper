@@ -12,7 +12,6 @@ import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
-import io.flutter.plugin.common.PluginRegistry.Registrar
 
 /** MyidWrapperPlugin */
 class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
@@ -21,17 +20,10 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
   private lateinit var activityListener: MyIdSdkActivityListener
   private lateinit var myIdNativeClient: MyIdNativeClient
 
-  companion object {
-    @JvmStatic
-    fun registerWith(registrar: Registrar) {
-      val instance = MyidWrapperPlugin()
-      registrar.addActivityResultListener(instance.activityListener)
-    }
-  }
 
 
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "myid_wrapper")
+    channel = MethodChannel(flutterPluginBinding.binaryMessenger, "uz.mani.myid_wrapper")
     channel.setMethodCallHandler(this)
 
     myIdNativeClient = MyIdNativeClient()
@@ -39,6 +31,7 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
   }
 
   override fun onMethodCall(call: MethodCall, result: Result) {
+    println("Method called: ${call.method}")
     if (call.method == "startMyId") {
       val config = call.arguments as HashMap<*, *>
       startMyId(result, config["passportData"] as String, config["dateOfBirth"] as String)
@@ -68,6 +61,7 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
   override fun onAttachedToActivity(binding: ActivityPluginBinding) {
     activity = binding.activity
     binding.addActivityResultListener(activityListener)
+    println("Activity attached")
   }
 
   override fun onDetachedFromActivityForConfigChanges() {

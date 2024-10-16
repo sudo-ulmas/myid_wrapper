@@ -7,7 +7,7 @@ import 'myid_wrapper_platform_interface.dart';
 class MethodChannelMyidWrapper extends MyidWrapperPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
-  final methodChannel = const MethodChannel('myid_wrapper');
+  final methodChannel = const MethodChannel('uz.mani.myid_wrapper');
 
   @override
   Future<String?> startMyId(String passportData, String dateOfBirth) async {
