@@ -26,4 +26,8 @@ abstract class MyidWrapperPlatform extends PlatformInterface {
   Future<String?> startMyId(String passportData, String dateOfBirth) {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
+
+  Future<String?> getAppDocsDir() {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
 }

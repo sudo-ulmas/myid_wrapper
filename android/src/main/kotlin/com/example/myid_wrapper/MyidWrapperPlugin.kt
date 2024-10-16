@@ -32,14 +32,24 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
     myIdNativeClient = MyIdNativeClient()
     activityListener = MyIdSdkActivityListener(myIdNativeClient)
   }
+  private fun getDocumentsDirectoryPath(): String? {
+    return activity?.filesDir?.absolutePath
+  }
 
   override fun onMethodCall(call: MethodCall, result: Result) {
     println("Method called: ${call.method}")
-    if (call.method == "startMyId") {
-      val config = call.arguments as HashMap<*, *>
-      startMyId(result, config["passportData"] as String, config["dateOfBirth"] as String)
-    } else {
-      result.notImplemented()
+    when (call.method) {
+        "startMyId" -> {
+          val config = call.arguments as HashMap<*, *>
+          startMyId(result, config["passportData"] as String, config["dateOfBirth"] as String)
+        }
+        "getDocumentsDirectory" -> {
+          val documentsPath = getDocumentsDirectoryPath()
+          result.success(documentsPath)
+        }
+        else -> {
+          result.notImplemented()
+        }
     }
   }
   private fun startMyId(result: Result, passportData: String, dateOfBirth: String) {

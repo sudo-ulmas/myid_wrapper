@@ -19,4 +19,13 @@ class MethodChannelMyidWrapper extends MyidWrapperPlatform {
       return version;
     } catch (e) {}
   }
+
+  @override
+  Future<String?> getAppDocsDir() async {
+    try {
+      final path =
+          await methodChannel.invokeMethod<String>('getDocumentsDirectory');
+      return path;
+    } catch (e) {}
+  }
 }
