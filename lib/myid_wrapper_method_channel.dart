@@ -17,7 +17,6 @@ class MethodChannelMyidWrapper extends MyidWrapperPlatform {
         'dateOfBirth': dateOfBirth,
       });
       return version;
-    } catch (e) {
-    }
+    } catch (e) {}
   }
 }

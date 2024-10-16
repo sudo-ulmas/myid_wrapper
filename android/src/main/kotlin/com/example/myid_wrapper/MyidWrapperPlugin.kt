@@ -3,6 +3,7 @@ package com.example.myid_wrapper
 import android.app.Activity
 import android.os.Handler
 import android.os.Looper
+import android.util.Log
 import com.example.myidlibrary.MyIdNativeClient
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
@@ -23,6 +24,8 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
 
 
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
+    Log.d("MyIDWrapperPlugin", "Plugin initialized")
+    println("hello")
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "uz.mani.myid_wrapper")
     channel.setMethodCallHandler(this)
 
