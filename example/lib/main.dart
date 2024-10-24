@@ -27,12 +27,12 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> startMyId() async {
+    print('tryting');
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     // We also handle the message potentially returning null.
     try {
-      platformVersion = await _myidWrapperPlugin.startMyId("", "") ??
-          'Unknown platform version';
+      platformVersion = await _myidWrapperPlugin.startMyId("AD5644300", "13.09.1997") ?? 'Unknown platform version';
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
