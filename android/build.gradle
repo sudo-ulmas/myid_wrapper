@@ -71,7 +71,9 @@ android {
 }
 dependencies {
     compileOnly fileTree(dir: 'libs', include: ['*.aar'])
-//    implementation(name:'myidlibrary-debug', ext:'aar')
+   // implementation(name:'myidlibrary-debug', ext:'aar')
+//    api project(':myidnative')
+//    implementation project(':myidnative')
     implementation files('libs/myidlibrary-debug.aar')
     implementation("uz.myid.sdk.capture:myid-capture-sdk:2.3.0")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
