@@ -70,11 +70,10 @@ android {
     }
 }
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.aar'])
-   // implementation(name:'myidlibrary-debug', ext:'aar')
-//    api project(':myidnative')
-//    implementation project(':myidnative')
-    implementation files('libs/myidlibrary-debug.aar')
+    compileOnly fileTree(dir: 'libs', include: ['*.aar'])
+//    implementation fileTree(dir: 'libs', include: ['*.aar'])
+//    implementation(name:'myidlibrary-debug', ext:'aar')
+//    implementation files('libs/myidlibrary-debug.aar')
     implementation("uz.myid.sdk.capture:myid-capture-sdk:2.3.0")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.mockito:mockito-core:5.1.0")
