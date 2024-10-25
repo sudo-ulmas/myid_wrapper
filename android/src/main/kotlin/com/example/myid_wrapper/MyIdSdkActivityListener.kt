@@ -6,8 +6,8 @@ import android.util.Base64
 import com.example.myidlibrary.MyIdNativeClient
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.PluginRegistry
-import uz.myid.android.sdk.capture.model.MyIdGraphicFieldType
-import uz.myid.android.sdk.capture.model.MyIdImageFormat
+//import uz.myid.android.sdk.capture.model.MyIdGraphicFieldType
+//import uz.myid.android.sdk.capture.model.MyIdImageFormat
 import java.io.ByteArrayOutputStream
 
 class MyIdSdkActivityListener(
@@ -24,19 +24,19 @@ class MyIdSdkActivityListener(
         client.handleActivityResult(resultCode,
             onSuccess = { result ->
                 try {
-                    val bitmap = result.getGraphicFieldImageByType(MyIdGraphicFieldType.FACE_PORTRAIT)
+//                    val bitmap = result.getGraphicFieldImageByType(MyIdGraphicFieldType.FACE_PORTRAIT)
 
                     val response = Response(
-                        code = result.code,
-                        comparison = result.comparison,
-                        base64 = bitmap?.toBase64()
+                        code = ""//result.code,
+//                        comparison = result.comparison,
+//                        base64 = bitmap?.toBase64()
                     )
                     println("success ${response.code} and result $flutterResult")
                     flutterResult?.success(response.code)
                 } catch (e: Exception) {
                     val response = Response(
-                        code = result.code,
-                        comparison = result.comparison
+                        code = ""//result.code,
+//                        comparison = result.comparison
                     )
                     flutterResult?.success(response.toMap())
                 } finally {
@@ -44,12 +44,12 @@ class MyIdSdkActivityListener(
                 }
             },
             onError = { exception ->
-                println("error ${exception.code} - ${exception.message}")
-                flutterResult?.error(
-                    "error",
-                    "${exception.code} - ${exception.message}",
-                    null
-                )
+//                println("error ${exception.code} - ${exception.message}")
+//                flutterResult?.error(
+//                    "error",
+//                    "${exception.code} - ${exception.message}",
+//                    null
+//                )
                 flutterResult = null
             },
             onUserExited = {
@@ -66,26 +66,26 @@ class MyIdSdkActivityListener(
         return true
     }
 
-    private fun Bitmap?.toBase64(
-        format: MyIdImageFormat = MyIdImageFormat.JPG
-    ): String? {
-        this ?: return null
-
-        return Base64.encodeToString(toByteArray(format), Base64.DEFAULT)
-    }
-
-    private fun Bitmap.toByteArray(
-        format: MyIdImageFormat,
-        quality: Int = 100
-    ): ByteArray? {
-        val compressFormat = when (format) {
-            MyIdImageFormat.JPG -> Bitmap.CompressFormat.JPEG
-            MyIdImageFormat.PNG -> Bitmap.CompressFormat.PNG
-        }
-
-        ByteArrayOutputStream().use { stream ->
-            compress(compressFormat, quality, stream)
-            return stream.toByteArray()
-        }
-    }
+//    private fun Bitmap?.toBase64(
+//        format: MyIdImageFormat = MyIdImageFormat.JPG
+//    ): String? {
+//        this ?: return null
+//
+//        return Base64.encodeToString(toByteArray(format), Base64.DEFAULT)
+//    }
+//
+//    private fun Bitmap.toByteArray(
+//        format: MyIdImageFormat,
+//        quality: Int = 100
+//    ): ByteArray? {
+//        val compressFormat = when (format) {
+//            MyIdImageFormat.JPG -> Bitmap.CompressFormat.JPEG
+//            MyIdImageFormat.PNG -> Bitmap.CompressFormat.PNG
+//        }
+//
+//        ByteArrayOutputStream().use { stream ->
+//            compress(compressFormat, quality, stream)
+//            return stream.toByteArray()
+//        }
+//    }
 }
