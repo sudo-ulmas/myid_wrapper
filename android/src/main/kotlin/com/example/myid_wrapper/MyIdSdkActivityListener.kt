@@ -3,9 +3,9 @@ package com.example.myid_wrapper
 import android.content.Intent
 import android.graphics.Bitmap
 import android.util.Base64
-import com.example.myidlibrary.MyIdNativeClient
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.PluginRegistry
+import uz.mani.maniauthlibrary.MyIdNativeClient
 //import uz.myid.android.sdk.capture.model.MyIdGraphicFieldType
 //import uz.myid.android.sdk.capture.model.MyIdImageFormat
 import java.io.ByteArrayOutputStream

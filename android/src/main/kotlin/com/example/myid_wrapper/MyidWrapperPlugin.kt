@@ -4,7 +4,6 @@ import android.app.Activity
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
-import com.example.myidlibrary.MyIdNativeClient
 
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
@@ -14,6 +13,7 @@ import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import io.flutter.plugin.common.PluginRegistry.Registrar
+import uz.mani.maniauthlibrary.MyIdNativeClient
 
 /** MyidWrapperPlugin */
 class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
@@ -62,7 +62,7 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
         Log.d("all good 2", "all good 2");
         myIdNativeClient.setActivity(act)
         Log.d("all good 3", "all good 3");
-        myIdNativeClient.startMyIdxon(passportData, dateOfBirth)
+        myIdNativeClient.startMyid(passportData, dateOfBirth)
       } catch (e: Exception) {
         result.error("MyID_ERROR", "Failed to start MyID SDK: ${e.message}", null)
       }
