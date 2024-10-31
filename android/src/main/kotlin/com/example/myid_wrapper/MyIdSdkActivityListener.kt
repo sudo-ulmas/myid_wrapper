@@ -8,7 +8,7 @@ import io.flutter.plugin.common.PluginRegistry
 import uz.mani.maniauthlibrary.MyIdNativeClient
 //import uz.myid.android.sdk.capture.model.MyIdGraphicFieldType
 //import uz.myid.android.sdk.capture.model.MyIdImageFormat
-import java.io.ByteArrayOutputStream
+//import java.io.ByteArrayOutputStream
 
 class MyIdSdkActivityListener(
     private val client: MyIdNativeClient
@@ -26,16 +26,16 @@ class MyIdSdkActivityListener(
                 try {
 //                    val bitmap = result.getGraphicFieldImageByType(MyIdGraphicFieldType.FACE_PORTRAIT)
                     val response = Response(
-                        code = result.code,
-                        comparison = result.comparison,
+                        code = result,
+//                        comparison = result.comparison,
 //                        base64 = bitmap?.toBase64()
                     )
                     println("success ${response.code} and result $flutterResult")
                     flutterResult?.success(response.code)
                 } catch (e: Exception) {
                     val response = Response(
-                        code = result.code,
-                        comparison = result.comparison
+                        code = result,
+//                        comparison = result.comparison
                     )
                     flutterResult?.success(response.toMap())
                 } finally {
@@ -43,10 +43,10 @@ class MyIdSdkActivityListener(
                 }
             },
             onError = { exception ->
-                println("error ${exception.code} - ${exception.message}")
+                println("error $exception")
                 flutterResult?.error(
                     "error",
-                    "${exception.code} - ${exception.message}",
+                    exception,
                     null
                 )
                 flutterResult = null
