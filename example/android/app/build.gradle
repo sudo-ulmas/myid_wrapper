@@ -21,10 +21,16 @@ android {
 
     defaultConfig {
         applicationId = "com.example.myid_wrapper_example"
-        minSdk = flutter.minSdkVersion
+        minSdk = 24
         targetSdk = flutter.targetSdkVersion
         versionCode = 1//flutter.versionCode
         versionName = "1.0"//flutter.versionName
+    }
+//     dependencies {
+//         implementation project(':myid_wrapper');
+//     }
+    dependencies {
+        implementation files('../libs/maniAuthLibrary-debug.aar')
     }
 
     buildTypes {
@@ -37,3 +43,4 @@ android {
 flutter {
     source = "../.."
 }
+
