@@ -33,6 +33,7 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
 
 
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
+
     Log.d("all good onAttToEngine", "all good onAttachedToEngine");
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "myid_wrapper")
     Log.d("1", "all good onAttachedToEngine");
@@ -46,11 +47,14 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
   }
 
   override fun onMethodCall(call: MethodCall, result: Result) {
-    Log.d("all good onMethodCall", "all good onMethodCall");
+    Log.d("all good mcl", "all good mc");
     if (call.method == "startMyId") {
+      Log.d("hello", "hello");
       val config = call.arguments as HashMap<*, *>
+      Log.d("starting", "myidfunction");
       startMyId(result, config["passportData"] as String, config["dateOfBirth"] as String)
     } else {
+      Log.d("hi", "hi");
       result.notImplemented()
     }
   }
@@ -64,9 +68,11 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
         Log.d("all good 3", "all good 3");
         myIdNativeClient.startMyid(passportData, dateOfBirth)
       } catch (e: Exception) {
+        Log.d("error", "myid error");
         result.error("MyID_ERROR", "Failed to start MyID SDK: ${e.message}", null)
       }
     } ?: run {
+      Log.d("error", "activity null");
       result.error("ACTIVITY_NULL", "Activity is not attached", null)
     }
   }
@@ -83,15 +89,15 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
   }
 
   override fun onDetachedFromActivityForConfigChanges() {
-    println("detachcha")
+    Log.d("detachcha","dtch")
   }
   override fun onReattachedToActivityForConfigChanges(binding: ActivityPluginBinding) {
-    println("recreato")
+    Log.d("recreat","rct")
     onAttachedToActivity(binding)
   }
 
   override fun onDetachedFromActivity() {
-    println("detacho")
+    Log.d("detach","dtch")
   }
 
 
