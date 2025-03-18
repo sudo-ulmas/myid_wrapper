@@ -12,7 +12,6 @@ import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
-import io.flutter.plugin.common.PluginRegistry.Registrar
 import uz.mani.maniauthlibrary.MyIdNativeClient
 
 /** MyidWrapperPlugin */
@@ -22,14 +21,14 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
   private lateinit var activityListener: MyIdSdkActivityListener
   private lateinit var myIdNativeClient: MyIdNativeClient
 
-  companion object {
-    @JvmStatic
-    fun registerWith(registrar: Registrar) {
-      Log.d("all good", "all good");
-      val instance = MyidWrapperPlugin()
-      registrar.addActivityResultListener(instance.activityListener)
-    }
-  }
+//  companion object {
+//    @JvmStatic
+//    fun registerWith(registrar: Registrar) {
+//      Log.d("all good", "all good");
+//      val instance = MyidWrapperPlugin()
+//      registrar.addActivityResultListener(instance.activityListener)
+//    }
+//  }
 
 
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {

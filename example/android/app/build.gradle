@@ -8,7 +8,7 @@ android {
     ndkVersion = "26.1.10909125"
     namespace = "com.example.myid_wrapper_example"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+//    ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8

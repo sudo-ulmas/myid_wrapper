@@ -1,0 +1,2 @@
+/Users/abdullah/flutterProjects/myid_wrapper/example/android/app/.cxx/Debug/5g549536/x86/CMakeFiles/edit_cache.dir
+/Users/abdullah/flutterProjects/myid_wrapper/example/android/app/.cxx/Debug/5g549536/x86/CMakeFiles/rebuild_cache.dir
