@@ -10,27 +10,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		XVTwyAK4OOC32f+IxlSCbsBT9H4=
+		TC7O66FepkXi+m70thhU3DfcAgg=
 		</data>
 		<key>Modules/MyIDNative.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		gmW6hThopj+L7frc2/zAfRhAIq0=
+		jFrbWAdiSECxmqAnyyQ9VZXLfQQ=
 		</data>
 		<key>Modules/MyIDNative.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		a9qJxH61cWxMo45mOyJ8/LnXHWQ=
+		fT4zCFgaIVWCs1St3qAynEtwRmI=
 		</data>
 		<key>Modules/MyIDNative.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		MJNyZ3068J/VUwZDlfShDE2MPFU=
+		TgLqI7LkEGKRL/lSLhlxjcR5xy8=
 		</data>
 		<key>Modules/MyIDNative.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		a9qJxH61cWxMo45mOyJ8/LnXHWQ=
+		fT4zCFgaIVWCs1St3qAynEtwRmI=
 		</data>
 		<key>Modules/MyIDNative.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		qkCdPUHQPh5UAZDShBiPISAUR4k=
+		bI6X+gp1ho57evA1zzitePtRVA4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,35 +50,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			W6514OagEIPL2DwmNB2jHPqxZCSAEI8qrYgi8lc9FSM=
+			J6SMkY3TV8TE/vSgsUSDfoaNlusQF0pFeo7jTDT0JV4=
 			</data>
 		</dict>
 		<key>Modules/MyIDNative.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NyLkgiSF1vdQe4K7dEKyv+mNsqimmXXGADhBXt1m8u8=
+			IwWbkddyGpJiKGLIZbgHMvsVoxyzjsN4r0wmLEHWx5s=
 			</data>
 		</dict>
 		<key>Modules/MyIDNative.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			j3wCcmdMUT+Oqg4dIRyYCqA3ue46YUf7oAvD7qU9arI=
+			U+R3s6CSST2FMldKH/oGk1vLou6L2oT5dMNidb/7BDc=
 			</data>
 		</dict>
 		<key>Modules/MyIDNative.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NyLkgiSF1vdQe4K7dEKyv+mNsqimmXXGADhBXt1m8u8=
+			IwWbkddyGpJiKGLIZbgHMvsVoxyzjsN4r0wmLEHWx5s=
 			</data>
 		</dict>
 		<key>Modules/MyIDNative.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			u5yzuW0c0faSislNoPsMh/bqlwRCzvJuqAt04mRLunE=
+			s1sK2UvcPhDfhZozjwzltrWmt0XCFBea+zqtGSuU6PQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
