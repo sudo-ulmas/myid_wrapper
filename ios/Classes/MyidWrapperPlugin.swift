@@ -6,7 +6,6 @@ public class MyidWrapperPlugin: NSObject, FlutterPlugin, MyIdNativeClientDelegat
     var  flResult: FlutterResult?
    public func onSuccess(code: String) {
        if let result = flResult {
-           print("hello world")
            result(code)
        }
    }
@@ -14,7 +13,6 @@ public class MyidWrapperPlugin: NSObject, FlutterPlugin, MyIdNativeClientDelegat
    
    public func onError(exception: String) {
        if let result = flResult {
-           print("nma gap nma nma gap")
            result(exception)
        }
    }
@@ -22,7 +20,6 @@ public class MyidWrapperPlugin: NSObject, FlutterPlugin, MyIdNativeClientDelegat
    public func onUserExited() {
        
        if let result = flResult {
-           result("usha gap")
        }
    }
   public static func register(with registrar: FlutterPluginRegistrar) {
