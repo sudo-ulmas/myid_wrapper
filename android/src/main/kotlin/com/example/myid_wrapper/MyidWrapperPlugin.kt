@@ -51,13 +51,13 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
       Log.d("hello", "hello");
       val config = call.arguments as HashMap<*, *>
       Log.d("starting", "myidfunction");
-      startMyId(result, config["passportData"] as String, config["dateOfBirth"] as String)
+      startMyId(result, config["passportData"] as String, config["dateOfBirth"] as String, config["isResident"] as Boolean)
     } else {
       Log.d("hi", "hi");
       result.notImplemented()
     }
   }
-  private fun startMyId(result: Result, passportData: String, dateOfBirth: String) {
+  private fun startMyId(result: Result, passportData: String, dateOfBirth: String, isResident: Boolean) {
     activity?.let { act ->
       try {
         Log.d("all good 1", "all good 1");
@@ -65,7 +65,15 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
         Log.d("all good 2", "all good 2");
         myIdNativeClient.setActivity(act)
         Log.d("all good 3", "all good 3");
-        myIdNativeClient.startMyid(passportData, dateOfBirth)
+        myIdNativeClient.startMyid(passportData, dateOfBirth, isResident,  onSuccess = { result ->
+          println("1Success: $result")
+        },
+          onError = { error ->
+            println("1Error: $error")
+          },
+          onUserExited = {
+            println("1User exited")
+          })
       } catch (e: Exception) {
         Log.d("error", "myid error");
         result.error("MyID_ERROR", "Failed to start MyID SDK: ${e.message}", null)
