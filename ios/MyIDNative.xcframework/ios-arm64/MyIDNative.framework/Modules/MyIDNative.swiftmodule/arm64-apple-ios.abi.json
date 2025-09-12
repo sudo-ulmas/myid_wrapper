@@ -270,7 +270,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(passportData:dateOfBirth:delegate:)",
+            "printedName": "init(passportData:dateOfBirth:isResident:delegate:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -292,6 +292,12 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "Optional",
                 "printedName": "(any MyIDNative.MyIdNativeClientDelegate)?",
                 "children": [
@@ -307,8 +313,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:10MyIDNative0A14IdNativeClientC12passportData11dateOfBirth8delegateACSS_SSAA0acdE8Delegate_pSgtcfc",
-            "mangledName": "$s10MyIDNative0A14IdNativeClientC12passportData11dateOfBirth8delegateACSS_SSAA0acdE8Delegate_pSgtcfc",
+            "usr": "s:10MyIDNative0A14IdNativeClientC12passportData11dateOfBirth10isResident8delegateACSS_SSSbAA0acdE8Delegate_pSgtcfc",
+            "mangledName": "$s10MyIDNative0A14IdNativeClientC12passportData11dateOfBirth10isResident8delegateACSS_SSSbAA0acdE8Delegate_pSgtcfc",
             "moduleName": "MyIDNative",
             "declAttributes": [
               "AccessControl"

@@ -15,7 +15,7 @@ public protocol MyIdNativeClientDelegate : AnyObject {
 }
 public class MyIdNativeClient : MyIdSDK.MyIdClientDelegate {
   weak public var delegate: (any MyIDNative.MyIdNativeClientDelegate)?
-  public init(passportData: Swift.String, dateOfBirth: Swift.String, delegate: (any MyIDNative.MyIdNativeClientDelegate)? = nil)
+  public init(passportData: Swift.String, dateOfBirth: Swift.String, isResident: Swift.Bool, delegate: (any MyIDNative.MyIdNativeClientDelegate)? = nil)
   public func startMyIdjon()
   @objc public func onSuccess(result: MyIdSDK.MyIdResult)
   @objc public func onError(exception: MyIdSDK.MyIdException)

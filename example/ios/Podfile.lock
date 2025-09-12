@@ -2,15 +2,23 @@ PODS:
   - Flutter (1.0.0)
   - integration_test (0.0.1):
     - Flutter
-  - myid_wrapper (0.0.1):
+  - myid (2.4.91):
+    - Flutter
+    - MyIdSDK (= 2.4.91)
+  - myid_wrapper (0.0.2):
     - Flutter
     - MyIdSDK
-  - MyIdSDK (2.3.3)
+  - MyIdSDK (2.4.91)
+  - path_provider_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
   - integration_test (from `.symlinks/plugins/integration_test/ios`)
+  - myid (from `.symlinks/plugins/myid/ios`)
   - myid_wrapper (from `.symlinks/plugins/myid_wrapper/ios`)
+  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
 
 SPEC REPOS:
   trunk:
@@ -21,15 +29,21 @@ EXTERNAL SOURCES:
     :path: Flutter
   integration_test:
     :path: ".symlinks/plugins/integration_test/ios"
+  myid:
+    :path: ".symlinks/plugins/myid/ios"
   myid_wrapper:
     :path: ".symlinks/plugins/myid_wrapper/ios"
+  path_provider_foundation:
+    :path: ".symlinks/plugins/path_provider_foundation/darwin"
 
 SPEC CHECKSUMS:
-  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
   integration_test: 252f60fa39af5e17c3aa9899d35d908a0721b573
-  myid_wrapper: 5fefd9ce3e8d78203bc8838b8f30d0cdb38d422c
-  MyIdSDK: 7e81df8dc44e318fee54591bb61de52a550cbf22
+  myid: a764d6f2c67c0d87671b167e24c6857847dbac35
+  myid_wrapper: ae2ddb675f0d5d76bb076254492014b6b1470126
+  MyIdSDK: 536d148f0f599f05e0b075d107f53308237f3119
+  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
 
-PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
+PODFILE CHECKSUM: 1959d098c91d8a792531a723c4a9d7e9f6a01e38
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2
