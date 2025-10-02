@@ -1,8 +1,7 @@
 import 'myid_wrapper_platform_interface.dart';
 
 class MyidWrapper {
-  Future<String?> startMyId(String passportData, String dateOfBirth, bool isResident) {
-    return MyidWrapperPlatform.instance
-        .startMyId(passportData, dateOfBirth,isResident);
+  Future<String?> startMyId(String sessionId, String locale, bool isResident) {
+    return MyidWrapperPlatform.instance.startMyId(locale, sessionId, isResident);
   }
 }

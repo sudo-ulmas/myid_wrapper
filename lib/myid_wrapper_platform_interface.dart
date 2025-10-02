@@ -23,7 +23,7 @@ abstract class MyidWrapperPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> startMyId(String passportData, String dateOfBirth, bool isResident) {
+  Future<String?> startMyId(String locale, String sessionId, bool isResident) {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 }
