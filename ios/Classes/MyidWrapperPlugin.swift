@@ -32,11 +32,11 @@ public class MyidWrapperPlugin: NSObject, FlutterPlugin, MyIdNativeClientDelegat
     switch call.method {
     case "startMyId":
         if let arguments = call.arguments as? [String: Any],
-         let passportData = arguments["passportData"] as? String,
-           let dateOfBirth = arguments["dateOfBirth"] as? String,
+         let locale = arguments["locale"] as? String,
+           let sessionId = arguments["sessionId"] as? String,
            let isResident = arguments["isResident"] as? Bool {
             flResult = result
-            let myIdClient = MyIdNativeClient(passportData: passportData, dateOfBirth: dateOfBirth, isResident: isResident)
+            let myIdClient = MyIdNativeClient( isResident: isResident, sessionId: sessionId, locale: locale)
             myIdClient.delegate = self
             myIdClient.startMyIdjon()
         } else {

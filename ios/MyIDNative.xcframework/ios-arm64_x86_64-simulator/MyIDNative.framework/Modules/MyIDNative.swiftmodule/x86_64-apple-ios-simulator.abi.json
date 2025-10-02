@@ -165,6 +165,34 @@
         "printedName": "MyIdNativeClient",
         "children": [
           {
+            "kind": "Function",
+            "name": "onEvent",
+            "printedName": "onEvent(event:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MyIdEvent",
+                "printedName": "MyIdSDK.MyIdEvent",
+                "usr": "c:@M@MyIdSDK@E@MyIdEvent"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10MyIDNative0A14IdNativeClientC7onEvent5eventy0aC3SDK0acG0O_tF",
+            "mangledName": "$s10MyIDNative0A14IdNativeClientC7onEvent5eventy0aC3SDK0acG0O_tF",
+            "moduleName": "MyIDNative",
+            "objc_name": "onEventWithEvent:",
+            "declAttributes": [
+              "ObjC",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Var",
             "name": "delegate",
             "printedName": "delegate",
@@ -270,7 +298,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(passportData:dateOfBirth:isResident:delegate:)",
+            "printedName": "init(isResident:sessionId:locale:delegate:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -280,21 +308,21 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
                 "name": "Bool",
                 "printedName": "Swift.Bool",
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               },
               {
                 "kind": "TypeNominal",
@@ -313,8 +341,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:10MyIDNative0A14IdNativeClientC12passportData11dateOfBirth10isResident8delegateACSS_SSSbAA0acdE8Delegate_pSgtcfc",
-            "mangledName": "$s10MyIDNative0A14IdNativeClientC12passportData11dateOfBirth10isResident8delegateACSS_SSSbAA0acdE8Delegate_pSgtcfc",
+            "usr": "s:10MyIDNative0A14IdNativeClientC10isResident07sessionC06locale8delegateACSb_S2SAA0acdE8Delegate_pSgtcfc",
+            "mangledName": "$s10MyIDNative0A14IdNativeClientC10isResident07sessionC06locale8delegateACSb_S2SAA0acdE8Delegate_pSgtcfc",
             "moduleName": "MyIDNative",
             "declAttributes": [
               "AccessControl"
@@ -458,21 +486,21 @@
     {
       "filePath": "\/Users\/abdullah\/flutterProjects\/MyIDNative\/MyIDNative\/MyIdNative.swift",
       "kind": "StringLiteral",
-      "offset": 102,
+      "offset": 96,
       "length": 53,
       "value": "\"yagona_sdk-zL0y2qa4EsMiLRhjRd3iPcraiT78ojMIjGIvOprk\""
     },
     {
       "filePath": "\/Users\/abdullah\/flutterProjects\/MyIDNative\/MyIDNative\/MyIdNative.swift",
       "kind": "StringLiteral",
-      "offset": 193,
+      "offset": 187,
       "length": 394,
       "value": "\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAstzi2XRq3reo0vtSGp5OHFbSdTcVYh9gl3PUVFVFpLFrNTiCqo46iAxnLd0+edT8e+mD6YlwRTv9rMAE2wRUgG\/k9K2WKlKRGbvSqvJrPVR7kj06t4D848o7UqrZVssvl65Y+sGKXNi2hiSr7ihwkpSdN21AzZEC3OjXaFkySdB6u+65g4f7sIB51Mg33WrcdwnEWKa7uOuIA+WA32OGroL7hwi7ygONA9hh8icy\/R2IPAWH5f++gHIWjZAdXiwxCdcKEOWtv7FKl4asIg8jzNw0y\/nH+ShQo8kBHl38LKiqnXcvTqUimuigIvtE1PElWoUrIRv7C3R73CXs1V7yAwIDAQAB\""
     },
     {
       "filePath": "\/Users\/abdullah\/flutterProjects\/MyIDNative\/MyIDNative\/MyIdNative.swift",
       "kind": "StringLiteral",
-      "offset": 627,
+      "offset": 621,
       "length": 38,
       "value": "\"77b991d1-077b-4ebf-9a2c-33d7b9d309d5\""
     }

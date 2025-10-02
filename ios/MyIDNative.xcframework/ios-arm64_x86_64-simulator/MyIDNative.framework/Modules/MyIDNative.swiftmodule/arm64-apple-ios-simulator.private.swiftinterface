@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
-// swift-module-flags: -target arm64-apple-ios17.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name MyIDNative
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target arm64-apple-ios17.5-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name MyIDNative
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
 import Foundation
 @_exported import MyIDNative
 import MyIdSDK
@@ -14,8 +15,11 @@ public protocol MyIdNativeClientDelegate : AnyObject {
   func onUserExited()
 }
 public class MyIdNativeClient : MyIdSDK.MyIdClientDelegate {
+  @objc public func onEvent(event: MyIdSDK.MyIdEvent)
   weak public var delegate: (any MyIDNative.MyIdNativeClientDelegate)?
-  public init(passportData: Swift.String, dateOfBirth: Swift.String, isResident: Swift.Bool, delegate: (any MyIDNative.MyIdNativeClientDelegate)? = nil)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init(isResident: Swift.Bool, sessionId: Swift.String, locale: Swift.String, delegate: (any MyIDNative.MyIdNativeClientDelegate)? = nil)
+  #endif
   public func startMyIdjon()
   @objc public func onSuccess(result: MyIdSDK.MyIdResult)
   @objc public func onError(exception: MyIdSDK.MyIdException)
