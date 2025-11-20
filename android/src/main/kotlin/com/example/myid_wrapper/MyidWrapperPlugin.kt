@@ -33,39 +33,27 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
 
   override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
 
-    Log.d("all good onAttToEngine", "all good onAttachedToEngine");
     channel = MethodChannel(flutterPluginBinding.binaryMessenger, "myid_wrapper")
-    Log.d("1", "all good onAttachedToEngine");
     channel.setMethodCallHandler(this)
-    Log.d("2", "all good onAttachedToEngine");
 
     myIdNativeClient = MyIdNativeClient()
-    Log.d("3", "all good onAttachedToEngine");
     activityListener = MyIdSdkActivityListener(myIdNativeClient)
-    Log.d("4", "all good onAttachedToEngine");
   }
 
   override fun onMethodCall(call: MethodCall, result: Result) {
-    Log.d("all good mcl", "all good mc");
     if (call.method == "startMyId") {
-      Log.d("hello", "hello");
       val config = call.arguments as HashMap<*, *>
-      Log.d("starting", "myidfunction");
-      startMyId(result, config["passportData"] as String, config["dateOfBirth"] as String, config["isResident"] as Boolean)
+      startMyId(result, config["sessionId"] as String, config["locale"] as String, config["isResident"] as Boolean)
     } else {
-      Log.d("hi", "hi");
       result.notImplemented()
     }
   }
-  private fun startMyId(result: Result, passportData: String, dateOfBirth: String, isResident: Boolean) {
+  private fun startMyId(result: Result, sessionId: String, locale: String, isResident: Boolean) {
     activity?.let { act ->
       try {
-        Log.d("all good 1", "all good 1");
         activityListener.setCurrentFlutterResult(result)
-        Log.d("all good 2", "all good 2");
         myIdNativeClient.setActivity(act)
-        Log.d("all good 3", "all good 3");
-        myIdNativeClient.startMyid(passportData, dateOfBirth, isResident,  onSuccess = { result ->
+        myIdNativeClient.startMyid(sessionId, isResident,  onSuccess = { result ->
           println("1Success: $result")
         },
           onError = { error ->
@@ -75,11 +63,9 @@ class MyidWrapperPlugin: FlutterPlugin, MethodCallHandler,ActivityAware {
             println("1User exited")
           })
       } catch (e: Exception) {
-        Log.d("error", "myid error");
         result.error("MyID_ERROR", "Failed to start MyID SDK: ${e.message}", null)
       }
     } ?: run {
-      Log.d("error", "activity null");
       result.error("ACTIVITY_NULL", "Activity is not attached", null)
     }
   }
