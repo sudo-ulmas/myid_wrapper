@@ -18,6 +18,8 @@ class MethodChannelMyidWrapper extends MyidWrapperPlatform {
         'isResident': isResident,
       });
       return version;
-    } catch (e) {}
+    } catch (e) {
+      return null;
+    }
   }
 }

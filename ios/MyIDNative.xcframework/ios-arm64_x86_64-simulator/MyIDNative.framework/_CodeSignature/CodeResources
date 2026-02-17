@@ -14,7 +14,7 @@
 		</data>
 		<key>Modules/MyIDNative.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		52Qm7hn0dfC1RoN4LMjHPC/MTRI=
+		cYIFo8yZFFu8Hzy30mI/kmC+cKc=
 		</data>
 		<key>Modules/MyIDNative.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/MyIDNative.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		+zeb6ckbB9pCsICDPOECXJ2cwVc=
+		4cKQC7jr8SRni/3zb3NYWwQBXi0=
 		</data>
 		<key>Modules/MyIDNative.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		52Qm7hn0dfC1RoN4LMjHPC/MTRI=
+		cYIFo8yZFFu8Hzy30mI/kmC+cKc=
 		</data>
 		<key>Modules/MyIDNative.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/MyIDNative.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		IQpILti2XuGXvvKYvqexe8ju7DI=
+		ZLQ9DaAs+5yAv45U/NXUmhY6GXU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -70,7 +70,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PC0t9JuUgQTtWEw+JwdOaU7DT5FpQBtjmVp7vgYUFJY=
+			Bh0LFZa+pMTU7Cc48fIud9KYlOwuMhghCF4GLmu9H84=
 			</data>
 		</dict>
 		<key>Modules/MyIDNative.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -98,14 +98,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1PE6uXaCIB05VlMj7995Z8DoYjuA888GppaMSkkATUg=
+			KeJXelZSHT7U+eL7tsc7VAfq5UoO4IjrFsHsdsOeemg=
 			</data>
 		</dict>
 		<key>Modules/MyIDNative.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PC0t9JuUgQTtWEw+JwdOaU7DT5FpQBtjmVp7vgYUFJY=
+			Bh0LFZa+pMTU7Cc48fIud9KYlOwuMhghCF4GLmu9H84=
 			</data>
 		</dict>
 		<key>Modules/MyIDNative.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -133,7 +133,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			D6RBKVD+DBRZnue64+SsGmavKGxrJdDzUy1V0PyrvZ0=
+			Pbxsu12CM/Dga5IhFY1/OGSOm6vTQlVWs5cX0pjUXAA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

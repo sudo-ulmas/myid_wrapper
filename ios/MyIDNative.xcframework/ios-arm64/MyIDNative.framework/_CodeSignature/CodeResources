@@ -14,7 +14,7 @@
 		</data>
 		<key>Modules/MyIDNative.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		52Qm7hn0dfC1RoN4LMjHPC/MTRI=
+		cYIFo8yZFFu8Hzy30mI/kmC+cKc=
 		</data>
 		<key>Modules/MyIDNative.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/MyIDNative.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		NN8gZZ3Xxcf4C5C9LR4wv3h1w1A=
+		HvPReOj5sa4LepD4QokczL9JE6M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -50,7 +50,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PC0t9JuUgQTtWEw+JwdOaU7DT5FpQBtjmVp7vgYUFJY=
+			Bh0LFZa+pMTU7Cc48fIud9KYlOwuMhghCF4GLmu9H84=
 			</data>
 		</dict>
 		<key>Modules/MyIDNative.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -78,7 +78,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			a5AtNcRUZUDzqCZh8Op6n/o3uay/4SaJfR9tbgIcrPU=
+			m4JDzJ+DLUkUgVewq+3eG0Jl3pbCjnp0nNlnCGstElA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
