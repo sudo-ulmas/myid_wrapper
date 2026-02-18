@@ -38,7 +38,7 @@ public class MyidWrapperPlugin: NSObject, FlutterPlugin, MyIdNativeClientDelegat
             flResult = result
             let myIdClient = MyIdNativeClient( isResident: isResident, sessionId: sessionId, locale: locale)
             myIdClient.delegate = self
-            myIdClient.startMyIdjon()
+            myIdClient.startIdentification()
         } else {
             result(FlutterError(code: "100", message: "Provided arguments to startMyId method is not valid", details: ""))
         }

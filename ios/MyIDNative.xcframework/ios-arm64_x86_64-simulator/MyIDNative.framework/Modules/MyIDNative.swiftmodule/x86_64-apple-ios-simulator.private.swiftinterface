@@ -20,7 +20,7 @@ public class MyIdNativeClient : MyIdSDK.MyIdClientDelegate {
   #if compiler(>=5.3) && $NonescapableTypes
   public init(isResident: Swift.Bool, sessionId: Swift.String, locale: Swift.String, delegate: (any MyIDNative.MyIdNativeClientDelegate)? = nil)
   #endif
-  public func startMyIdjon()
+  public func startIdenditication()
   @objc public func onSuccess(result: MyIdSDK.MyIdResult)
   @objc public func onError(exception: MyIdSDK.MyIdException)
   @objc public func onUserExited()

@@ -351,8 +351,8 @@
           },
           {
             "kind": "Function",
-            "name": "startMyIdjon",
-            "printedName": "startMyIdjon()",
+            "name": "startIdenditication",
+            "printedName": "startIdenditication()",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -361,8 +361,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10MyIDNative0A14IdNativeClientC05startA5IdjonyyF",
-            "mangledName": "$s10MyIDNative0A14IdNativeClientC05startA5IdjonyyF",
+            "usr": "s:10MyIDNative0A14IdNativeClientC19startIdenditicationyyF",
+            "mangledName": "$s10MyIDNative0A14IdNativeClientC19startIdenditicationyyF",
             "moduleName": "MyIDNative",
             "declAttributes": [
               "AccessControl"
